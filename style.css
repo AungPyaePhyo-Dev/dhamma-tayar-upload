@@ -1,0 +1,82 @@
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #22201c;
+  --muted: #6b665c;
+  --line: #e7e2d8;
+  --accent: #9a5b13;
+  --accent-soft: #f6ead9;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161512;
+    --surface: #1e1c19;
+    --text: #ece8e1;
+    --muted: #a8a196;
+    --line: #34312b;
+    --accent: #e3a55a;
+    --accent-soft: #2c241a;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #161512;
+  --surface: #1e1c19;
+  --text: #ece8e1;
+  --muted: #a8a196;
+  --line: #34312b;
+  --accent: #e3a55a;
+  --accent-soft: #2c241a;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Myanmar",
+        "Myanmar Text", "Pyidaungsu", Roboto, sans-serif;
+}
+
+main, header, footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header { padding-top: 40px; }
+header .brand { font-weight: 700; font-size: 1.05rem; color: var(--accent); text-decoration: none; }
+
+h1 { font-size: 2rem; line-height: 1.25; margin: 24px 0 8px; }
+h2 { font-size: 1.25rem; margin: 40px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 24px 0 4px; }
+p, li { color: var(--text); }
+.lead { font-size: 1.1rem; color: var(--muted); margin-top: 0; }
+.my { line-height: 1.9; }
+.meta { color: var(--muted); font-size: 0.92rem; }
+
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.card.note { background: var(--accent-soft); border-color: transparent; }
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em;
+       background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+
+footer { margin: 56px auto 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.92rem; }
+footer nav a { margin-right: 16px; }

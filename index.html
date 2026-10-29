@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mm short</title>
+  <meta name="description" content="mm short — a private tool that publishes daily Dhamma talks to the YouTube channel ဓမ္မတရားတော်များ.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a class="brand" href="./">mm short</a></header>
+
+  <main>
+    <h1>Daily Dhamma talks, published on schedule</h1>
+    <p class="lead">mm short is a private tool used by the owner of the YouTube channel
+      <a href="https://www.youtube.com/channel/UCcDuw-mqRHq_x3jW9XQM6sQ">ဓမ္မတရားတော်များ</a>
+      to prepare and upload one long Dhamma talk video per day.</p>
+    <p class="my">ဓမ္မတရားတော်များ YouTube channel အတွက် နေ့စဉ် တရားတော် တစ်ပုဒ်စီ
+      ပြင်ဆင်ပြီး အချိန်ဇယားအတိုင်း တင်ပေးတဲ့ ကိုယ်ပိုင် tool ဖြစ်ပါတယ်။</p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li>Turns a recorded Dhamma talk (audio) into a video with still background images.</li>
+      <li>Prepares the title, description and thumbnail for each video.</li>
+      <li>Uploads the video to the owner's own channel as private, with a scheduled publish time.</li>
+      <li>Checks that each upload finished processing, so the same talk is never uploaded twice.</li>
+    </ul>
+
+    <h2>Who uses it</h2>
+    <p>Only the channel owner, on their own computer. mm short is not a public service:
+      there are no sign-ups and no other users. It never accesses anyone else's account.</p>
+
+    <h2>How it uses Google</h2>
+    <p>The owner signs in once with Google. mm short asks for two permissions:</p>
+    <table>
+      <tr><th>Permission</th><th>Why</th></tr>
+      <tr><td><code>youtube.upload</code></td>
+          <td>Upload videos and set thumbnails on the owner's channel.</td></tr>
+      <tr><td><code>youtube.readonly</code></td>
+          <td>Read the owner's own upload list and processing status, to avoid duplicates
+              and confirm each video is ready.</td></tr>
+    </table>
+    <p>It cannot delete videos, read comments, or change channel settings.
+      Details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <div class="card note">
+      This app uses YouTube API Services. By using it you agree to the
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+    </div>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:aungphyo.kh26@gmail.com">aungphyo.kh26@gmail.com</a></p>
+  </main>
+
+  <footer>
+    <nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+    <p>© 2026 mm short</p>
+  </footer>
+</body>
+</html>
